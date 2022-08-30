@@ -3,3 +3,4 @@
 levelup_key
 levelup_key.pub
 terraform.tfstate
+terraform.tfstate.backup
