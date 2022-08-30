@@ -15,5 +15,5 @@ variable "PATH_TO_PUBLIC_KEY" {
 }
 
 variable "INSTANCE_TYPE" {
-  default = "ubuntu"
+  default = "t2.micro"
 }
