@@ -26,13 +26,3 @@ resource "aws_route_table_association" "level-private-1-a" {
   subnet_id      = aws_subnet.levelupvpc-private-1.id
   route_table_id = aws_route_table.levelup-private.id
 }
-
-resource "aws_route_table_association" "level-private-1-b" {
-  subnet_id      = aws_subnet.levelupvpc-private-2.id
-  route_table_id = aws_route_table.levelup-private.id
-}
-
-resource "aws_route_table_association" "level-private-1-c" {
-  subnet_id      = aws_subnet.levelupvpc-private-3.id
-  route_table_id = aws_route_table.levelup-private.id
-}
