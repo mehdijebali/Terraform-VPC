@@ -22,7 +22,7 @@ resource "aws_route_table" "rt-private" {
 }
 
 # route associations private
-resource "aws_route_table_association" "private-b" {
-  subnet_id      = aws_subnet.private-subnet-B
+resource "aws_route_table_association" "private-B" {
+  subnet_id      = aws_subnet.private-subnet-B.id
   route_table_id = aws_route_table.rt-private.id
 }
