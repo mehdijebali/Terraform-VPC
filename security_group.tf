@@ -1,6 +1,6 @@
 #Security Group for levelupvpc
 resource "aws_security_group" "allow-levelup-ssh" {
-  vpc_id      = aws_vpc.levelupvpc.id
+  vpc_id      = aws_vpc.demo-vpc.id
   name        = "allow-levelup-ssh"
   description = "security group that allows ssh connection"
 
