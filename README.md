@@ -39,3 +39,14 @@ terraform plan
 terraform apply
 ```
 ## Expected Results
+After applying Terraform modifications, we can validate the implementation of the required resources from AWS Console;
+#### VPC
+![](./Lab_Results/vpc_name.png)
+#### EC2 instance
+![](./Lab_Results/custom_instance.png)
+#### Internet Gateway 
+![](./Lab_Results/gw_name.png)
+#### Route table (Public subnet)
+![](./Lab_Results/demo-rt.png)
+#### Route table (Private subnet)
+![](./Lab_Results/rt_private.png)
