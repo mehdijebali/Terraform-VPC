@@ -20,7 +20,7 @@ NAT is the porcess of routing specific IP Addresses into a predefined IP Address
 ```
 git clone https://github.com/mehdijebali/Terraform-VPC.git
 ```
-2. In the project root directory, create an SS key and name it **levelup_key**
+2. In the project root directory, create an SSH key and name it **levelup_key**
 ```
 ssh-keygen
 ``` 
