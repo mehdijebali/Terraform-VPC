@@ -14,9 +14,9 @@ A set of rules, called routes, that are used to determine where network traﬃc 
 #### Internet gateway
 A gateway that you attach to your VPC to enable communication between resources in your VPC and the internet. As a result, instances in public subnet can reach the internet through a route to the internet gateway.
 #### Network Address Translation (NAT)
-NAT is the porcess of routing specific IP Addresses into a predefined IP Address (Router). In fact, instances in a private subnet can connect to services outside the VPC. indeed, we can access to internet from subnet. In contrast, external sources cannot initiate a connection with "private" instances.  
+NAT is the porcess of routing specific IP Addresses into a predefined IP Address (Router). In fact, instances in a private subnet can connect to services outside the VPC. Indeed, we can access to internet from subnet. In contrast, external sources cannot initiate a connection with "private" instances.  
 ## Instructions
-1. clone the project 
+1. Clone the project 
 ```
 git clone https://github.com/mehdijebali/Terraform-VPC.git
 ```
@@ -42,6 +42,8 @@ terraform apply
 After applying Terraform modifications, we can validate the implementation of the required resources from AWS Console;
 #### VPC
 ![](./Lab_Results/vpc_name.png)
+#### Subnets
+![](./Lab_Results/subnet-name.png)
 #### EC2 instance
 ![](./Lab_Results/custom_instance.png)
 #### Internet Gateway 
