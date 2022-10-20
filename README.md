@@ -1,6 +1,6 @@
 # VPC Provisioning with Terraform
 In this demo, we will create AWS VPC with respect to the following diagram:
-![](./Lab_Results/Screenshot%20from%202022-08-30%2011-50-04.png)
+![](./Lab_Results/VPC.drawio.png)
 ## About VPC 
 Amazon Virtual Private Cloud (Amazon VPC) is the networking layer for AWS that enables you to launch AWS resources into a virtual network that you've defined. It is logically isolated from other virtual networks in the AWS Cloud.
 For Fresh account, Amazon have default VPC Network. But the best practice is to create your own VPC with your settings and configuration.
