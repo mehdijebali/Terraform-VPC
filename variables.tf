@@ -17,3 +17,11 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "INSTANCE_TYPE" {
   default = "t2.micro"
 }
+
+variable "KEY_NAME" {
+  default = "levelup_key"
+}
+
+variable "INSTANCE_NAME" {
+  default = "custom_instance"
+}

@@ -1,6 +1,6 @@
 
 resource "aws_key_pair" "levelup_key" {
-    key_name = "levelup_key"
+    key_name = var.KEY_NAME
     public_key = file(var.PATH_TO_PUBLIC_KEY)
 }
 
@@ -13,7 +13,7 @@ resource "aws_instance" "MyFirstInstnace" {
   subnet_id = aws_subnet.public-subnet-A.id
 
   tags = {
-    Name = "custom_instance"
+    Name = "${var.INSTANCE_NAME}"
   }
 
 }
