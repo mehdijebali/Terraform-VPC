@@ -17,7 +17,7 @@ resource "aws_route_table" "rt-private" {
   }
 
   tags = {
-    Name = "rt-private"
+    Name = "${var.PRIVATE_RT_NAME}"
   }
 }
 
