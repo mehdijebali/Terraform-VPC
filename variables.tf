@@ -25,3 +25,11 @@ variable "KEY_NAME" {
 variable "INSTANCE_NAME" {
   default = "custom_instance"
 }
+
+variable "SG_NAME" {
+  default = "allow-levelup-ssh"
+}
+
+variable "SG_DESCRIPTION" {
+  default = "security group that allows ssh connection"
+}
