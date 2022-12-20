@@ -3,7 +3,7 @@ default = "us-east-1"
 }
 
 variable "AMI_ID" {
-  default = "ami-09d3b3274b6c5d4aa"
+  default = "ami-0b0ea68c435eb488d"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
