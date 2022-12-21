@@ -87,3 +87,36 @@ resource "aws_route_table_association" "public-B" {
   subnet_id      = aws_subnet.public-subnet-B.id
   route_table_id = aws_route_table.demo-rt.id
 }
+
+#Module Outputs
+output "vpc_id" {
+  value = aws_vpc.demo-vpc.id
+} 
+
+output "internet_gateway" {
+  value = aws_internet_gateway.demo-gw
+} 
+
+output "internet_gateway" {
+  value = aws_internet_gateway.demo-gw
+} 
+
+output "nat_gateway_id" {
+  value = aws_nat_gateway.demo-nat-gw.id
+} 
+
+output "public_subnet_A_id" {
+  value = aws_subnet.public-subnet-A.id
+} 
+
+output "private_subnet_id" {
+  value = aws_subnet.private-subnet-B.id
+} 
+
+output "public_subnet_B_id" {
+  value = aws_subnet.public-subnet-B.id
+} 
+
+output "route_table_id" {
+  value = aws_route_table.rt-private.id
+} 
