@@ -5,15 +5,15 @@ resource "aws_eip" "eip-nat" {
 
 resource "aws_nat_gateway" "demo-nat-gw" {
   allocation_id = aws_eip.eip-nat.id
-  subnet_id     = aws_subnet.public-subnet-B.id
-  depends_on    = [aws_internet_gateway.demo-gw]
+  subnet_id     = module.network.public_subnet_B_id
+  depends_on    = [module.network.internet_gateway]
 }
 
 resource "aws_route_table" "rt-private" {
-  vpc_id = aws_vpc.demo-vpc.id
+  vpc_id = module.network.vpc_id
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.demo-nat-gw.id
+    nat_gateway_id = module.network.nat_gateway_id
   }
 
   tags = {
@@ -23,6 +23,6 @@ resource "aws_route_table" "rt-private" {
 
 # route associations private
 resource "aws_route_table_association" "private-B" {
-  subnet_id      = aws_subnet.private-subnet-B.id
-  route_table_id = aws_route_table.rt-private.id
+  subnet_id      = module.network.private_subnet_id
+  route_table_id = module.network.route_table_id
 }

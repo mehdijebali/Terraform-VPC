@@ -97,10 +97,6 @@ output "internet_gateway" {
   value = aws_internet_gateway.demo-gw
 } 
 
-output "internet_gateway" {
-  value = aws_internet_gateway.demo-gw
-} 
-
 output "nat_gateway_id" {
   value = aws_nat_gateway.demo-nat-gw.id
 } 

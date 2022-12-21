@@ -10,7 +10,7 @@ resource "aws_instance" "MyFirstInstnace" {
   key_name      = aws_key_pair.levelup_key.key_name
 
   vpc_security_group_ids = [aws_security_group.allow-levelup-ssh.id]
-  subnet_id = aws_subnet.public-subnet-A.id
+  subnet_id = module.network.public_subnet_A_id
 
   tags = {
     Name = "${var.INSTANCE_NAME}"
