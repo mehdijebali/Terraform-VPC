@@ -6,7 +6,7 @@ resource "aws_key_pair" "levelup_key" {
 
 #Security Group for levelupvpc
 resource "aws_security_group" "allow-levelup-ssh" {
-  vpc_id      = module.network.vpc_id
+  vpc_id      = var.SG_VPC_ID
   name        = var.SG_NAME
   description = var.SG_DESCRIPTION
 
@@ -35,8 +35,8 @@ resource "aws_instance" "MyFirstInstnace" {
   key_name      = aws_key_pair.levelup_key.key_name
 
   vpc_security_group_ids = [aws_security_group.allow-levelup-ssh.id]
-  subnet_id = module.network.public_subnet_A_id
-
+  subnet_id = var.INSTANCE_SUBNET_ID
+  
   tags = {
     Name = "${var.INSTANCE_NAME}"
   }
