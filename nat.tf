@@ -13,7 +13,7 @@ resource "aws_route_table" "rt-private" {
   vpc_id = module.network.vpc_id
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = module.network.nat_gateway_id
+    nat_gateway_id = aws_nat_gateway.demo-nat-gw.id
   }
 
   tags = {
@@ -24,5 +24,5 @@ resource "aws_route_table" "rt-private" {
 # route associations private
 resource "aws_route_table_association" "private-B" {
   subnet_id      = module.network.private_subnet_id
-  route_table_id = module.network.route_table_id
+  route_table_id = aws_route_table.rt-private.id
 }
